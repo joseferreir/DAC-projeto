@@ -1,0 +1,11 @@
+.DS_Store
+/dac-projeto-web/target
+/dac-projeto-core/target
+/dac-projeto-shared/target
+**/target
+**/.settings
+/app-shared/.settings
+/app-web/.settings
+/app-core/.settings
+nb-configuration.xml
+/db
