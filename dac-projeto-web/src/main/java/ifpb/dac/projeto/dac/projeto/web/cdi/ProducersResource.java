@@ -14,7 +14,7 @@ public class ProducersResource {
 
    
     @Produces
-    @Resource(lookup ="host-core/java:global/dac-projeto-core/UserSevice")
+    @Resource(lookup ="host-core/java:global/dac-projeto-core/UserSevice!ifpb.dac.projeto.dac.projeto.shared.interfaces.InterfaceUserservice")
     private InterfaceUserservice userService;
 
 }
