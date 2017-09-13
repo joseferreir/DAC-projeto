@@ -10,9 +10,9 @@ Para executar o projeto é preciso ter o [Docker compose](https://docs.docker.co
 # Passos para executar
 
 ### Passo 1
- clone o projeto no [bitbucket](https://bitbucket.org/Jose_Ferreira/dac-2017.1) 
+ clone o projeto no [github](https://github.com/joseferreir/DAC-projeto) 
 
-  **git clone https://Jose_Ferreira@bitbucket.org/Jose_Ferreira/dac-2017.1.git **
+  **git clone https://github.com/joseferreir/DAC-projeto.git **
 
 ### Passo 2
   Dentro da pasta criada execute os seguintes comandos
@@ -34,5 +34,5 @@ Creating webcliente
 
 Acesse:
 
-[http://localhost:8080/app-web](http://localhost:8080/app-web)
+[http://localhost:8080/dac-web](http://localhost:8080/dac-web)
 
