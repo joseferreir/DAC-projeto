@@ -23,8 +23,12 @@ import javax.inject.Named;
 @Named
 public class Controller {
     @Inject
-    InterfaceUserservice service;
-    private User user = new User();
+   private InterfaceUserservice service;
+    private User user ;
+
+    public Controller() {
+        this.user = new User();
+    }
    
     public String salvar(){
         System.err.println("controlle "+user);

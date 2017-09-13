@@ -14,37 +14,32 @@ import javax.naming.NamingException;
  */
 @ApplicationScoped
 public class ServiceLocator {
-
-    protected <T> T lookup(String recurso, Class<T> tipo) {
+protected <T> T lookup(String recurso, Class<T> tipo) {
         try {
             Properties props = new Properties();
+            //dac-contacts-core
+            props.setProperty("org.omg.CORBA.ORBInitialHost", "host-core");
+            props.setProperty("org.omg.CORBA.ORBInitialPort", "3700");
             props.put(Context.INITIAL_CONTEXT_FACTORY,
                     "com.sun.enterprise.naming.SerialInitContextFactory");
-
-            props.setProperty("org.omg.CORBA.ORBInitialHost", "localhost");
-            props.setProperty("org.omg.CORBA.ORBInitialPort", "3700");
-
-            props.setProperty("java.naming.factory.url.pkgs", 
+            props.setProperty(Context.URL_PKG_PREFIXES, 
                     "com.sun.enterprise.naming");
-            props.setProperty("java.naming.factory.state",
+            props.setProperty(Context.STATE_FACTORIES,
                     "com.sun.corba.ee.impl.presentation.rmi.JNDIStateFactoryImpl");
-
 
             props.put(Context.SECURITY_AUTHENTICATION, "simple");
             props.put(Context.SECURITY_PRINCIPAL, "admin");
             props.put(Context.SECURITY_CREDENTIALS, "admin");
 
             InitialContext context = new InitialContext(props);
-//            NamingEnumeration<NameClassPair> list2 = context.list(context.getNameInNamespace());
-//            while (list2.hasMore()) {
-//                System.out.println(list2.next());
-//            }
-
+            
             return (T) context.lookup(recurso);
+
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             ne.printStackTrace();
             throw new RuntimeException(ne);
         }
     }
+
 }

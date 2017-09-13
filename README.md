@@ -19,7 +19,8 @@ Para executar o projeto é preciso ter o [Docker compose](https://docs.docker.co
 
 ``` shell
 $  mvn clean install
-$  docker-compose up -d
+$  docker-compose up -d --build
+
   
 ```
 ** Si tudo deu certo,  A saida será **

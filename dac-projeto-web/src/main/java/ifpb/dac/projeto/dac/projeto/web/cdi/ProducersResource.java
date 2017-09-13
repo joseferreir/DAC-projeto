@@ -2,8 +2,9 @@ package ifpb.dac.projeto.dac.projeto.web.cdi;
 
 
 import ifpb.dac.projeto.dac.projeto.shared.interfaces.InterfaceUserservice;
-import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.Dependent;
+import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
 /**
@@ -11,10 +12,12 @@ import javax.enterprise.inject.Produces;
  */
 @ApplicationScoped
 public class ProducersResource {
-
-   
+    private static final String RESOURCE = "java:global/dac-core/UserSevice!ifpb.dac.projeto.dac.projeto.shared.interfaces.InterfaceUserservice";
     @Produces
-    @Resource(lookup ="host-core/java:global/dac-projeto-core/UserSevice!ifpb.dac.projeto.dac.projeto.shared.interfaces.InterfaceUserservice")
-    private InterfaceUserservice userService;
+    @Dependent
+    @Default
+    private InterfaceUserservice getContactService() {
+        return  new ServiceLocator().lookup(RESOURCE, InterfaceUserservice.class);
+    }
 
 }
