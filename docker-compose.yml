@@ -1,35 +1,38 @@
 version: '2'
 services:
-  dbpostgres:
-    container_name: bancopg
-    image: postgres
+  # DB
+  postgres-dac-projeto:
+    container_name: projeto-db
+    image: ijm/projeto-db
+    build: ./core/postgres
+    ports:
+     - "5434:5432"
+    expose:
+     - 5434
     volumes:
       - ./bd:/var/lib/postgresql
+       
+  #core
+  dac-projeto-core:
+    container_name: projeto-core
+    build: ./core
+    image: ijm/projeto-core
     ports:
-      - "5433:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: projeto
-  core:
-    container_name: coreapp
-    build: ./dac-projeto-core
-    image: jose/core
-    ports: 
-          - "8081:8080"
-          - "1098:1099"
-          - "1097:1098"
-          - "3874:3873"
-          - "3701:3700" 
-          - "8182:8181"
-          - "8010:8009"
-    links: 
-     - "dbpostgres:host-banco"
-  web:
-    container_name: webcliente
-    build: ./dac-projeto-web
-    image: jose/web
-    ports: 
-     - "8080:8080"
-    links: 
-     - "core:host-core"
+     - "8082:8080"
+     - "4951:4848"
+     - "3701:3700"
+    links:
+     - "postgres-dac-projeto:banco-dac"
+  
+  #web
+  dac-projeto-web:
+    container_name: projeto-web
+    build: ./web
+    image: ijm/dac-projeto-web
+    ports:
+     - "8083:8080"
+     - "4952:4848"
+    links:
+     - "dac-projeto-core:projeto-core-server"
+
+    

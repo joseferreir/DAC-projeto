@@ -18,21 +18,20 @@ Para executar o projeto é preciso ter o [Docker compose](https://docs.docker.co
   Dentro da pasta criada execute os seguintes comandos
 
 ``` shell
-$  mvn clean install
-$  docker-compose up -d --build
+$  sh run.sh
 
   
 ```
 ** Si tudo deu certo,  A saida será **
 
 ```
-Creating bancopg
-Creating coreapp
-Creating webcliente
+Creating dac-projeto-db
+Creating projeto-core
+Creating projeto-web
 
 ```
 
 Acesse:
 
-[http://localhost:8080/dac-web](http://localhost:8080/dac-web)
+[http://localhost:8083/web](http://localhost:8083/web)
 
