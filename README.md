@@ -36,7 +36,7 @@ Para ver detalhes sobre especificaçÕes do projeto juntamente com uma breve
 execute `stop.bat` (\*\*). para iniciar e  `stop.bat` (\*\*). Parar
   Os passos acima devem ser suficientes para iniciar os containers/módulos, bem como aqueles responsáveis pela persistência.
 
-6. Depois de inicializados os containers, o serviço web estará disponívesl em [http://localhost:8083/web/](http://localhost:8083/web/).
+4. Depois de inicializados os containers, o serviço web estará disponívesl em [http://localhost:8083/web/](http://localhost:8083/web/).
 
   Foi inserido um usuário `admin` para início de uso do sistema, com as seguinte credenciais:
     - email: admin@admin.com
