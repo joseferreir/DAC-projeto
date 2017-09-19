@@ -2,11 +2,11 @@
 docker-compose down
 
 # REMOVENDO IMAGENS
-#docker rmi -f npw/rhecruta-db
-#docker rmi -f npw/rhecruta-share
-#docker rmi -f npw/rhecruta-core
-#docker rmi -f npw/rhecruta-web
+docker rmi -f ijm/projeto-db
+#docker rmi -f npw/projeto-share
+docker rmi -f ijm/projeto-core
+docker rmi -f ijm/projeto-web
 
 
 # REMOVENDO VOLUME
-#docker volume remove rhecruta_postgres-volume-rhecruta
+#docker volume remove ./bd:/var/lib/postgresql
