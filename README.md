@@ -15,7 +15,7 @@ Para executar o projeto é preciso ter o [Docker compose](https://docs.docker.co
   **git clone https://github.com/joseferreir/DAC-projeto.git **
 
 ### Passo 2
-  Dentro da pasta criada execute os seguintes comandos
+  Dentro da pasta bin execute os seguintes comandos
 
 ``` shell  
    -  distribuição baseada no Debian
@@ -28,7 +28,7 @@ $ windows
 ** Si tudo deu certo,  A saida será **
 
 ```
-Creating dac-projeto-db
+Creating projeto-db
 Creating projeto-core
 Creating projeto-web
 
@@ -37,4 +37,16 @@ Creating projeto-web
 Acesse:
 
 [http://localhost:8083/web](http://localhost:8083/web)
+
+** Parar  Aplicação **
+
+```
+``` shell  
+   -  distribuição baseada no Debian
+$ ececulte: sh stop.sh 
+
+$ windows 
+ ececulte:  stop.bat
+
+```
 

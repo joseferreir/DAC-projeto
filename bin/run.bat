@@ -1,12 +1,13 @@
 echo off
 cls
-echo “Construindo o projeto backup”
-
+echo “Construindo o projeto”
+cd ..
 mvn clean install
 
 echo “Criando containe docker”
 
 docker-compose up -d --build
+cls
 
 echo “exibindo log containe core”
 

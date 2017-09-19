@@ -28,7 +28,7 @@ services:
   dac-projeto-web:
     container_name: projeto-web
     build: ./web
-    image: ijm/dac-projeto-web
+    image: ijm/projeto-web
     ports:
      - "8083:8080"
      - "4952:4848"
