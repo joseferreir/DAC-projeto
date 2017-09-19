@@ -5,7 +5,7 @@
  */
 package ifpb.dac.projeto.core.service;
 
-import ifpb.dac.projeto.core.repositorio.ProfessorRepositorio;
+import ifpb.dac.projeto.core.repsitory.ProfessorRepositorio;
 import ifpb.dac.projeto.shared.entity.Professor;
 import ifpb.dac.projeto.shared.service.ProfService;
 import javax.ejb.EJB;
