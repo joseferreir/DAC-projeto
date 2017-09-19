@@ -55,7 +55,7 @@ execute `stop.bat` (\*\*). para iniciar e  `stop.bat` (\*\*). Parar
   - encerra todos os containers iniciados através do docker-compose;
   - remove as imagens do projeto que foram criadas pelo script de inicalização;
   - (pode) remove o volume de persistência do container baseado em `Postgresql`. Sinta-se livre, por exemplo, para comentar/descomentar esta última linha no arquivo com intuito de preservar ou apagar o conteúdo do volume antes de encerrar a execução dos containers.
-3. Para sistemas **Windows** run,bat e stop.bat que são aos scriots citados a cima.
+3. Para sistemas **Windows** run.bat e stop.bat que são correspondèntes aos scriots citados a cima.
 
 <hr>
 
