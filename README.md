@@ -24,8 +24,7 @@ Para ver detalhes sobre especificaçÕes do projeto juntamente com uma breve
 
 
 
-1. Certifique-se que o seu serviço **Docker** esteja iniciado e que não haja outros serviços rodando nas seguintes portas: 8082, 8083, 4951, 4952 e 5434.
-
+1. Certifique-se que o seu serviço **Docker** esteja iniciado e que não haja outros serviços rodando nas seguintes portas: 5434, 8082, 4951, 3701, 8083, 4952
 2. Para iniciar os containers da ***Aplicação***, a partir da pasta bin deste projeto execute `sh ./run.sh` (\*\*). A partir deste passo, a aplicação já deve estar disponível para uso, logo após os containers terem inicializado.
 
 3. Se desejar parar todos os containers e remover os volumes de persistência de dados, pode ser executado `sh ./stop.sh`(\*\*).
