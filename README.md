@@ -22,7 +22,7 @@ Para executar o projeto é preciso ter o [Docker compose](https://docs.docker.co
 $ ececulte: sh run.sh 
 
 $ windows 
- ececulte: sh run.bat
+ ececulte:  run.bat
 	 
 ```
 ** Si tudo deu certo,  A saida será **
